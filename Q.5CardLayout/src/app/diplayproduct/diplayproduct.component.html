@@ -1,0 +1,24 @@
+<h2>Products</h2>
+
+<div style="margin-top:20px;">
+<div class="row justify-content-start">
+<div class="card" style="width: 18rem;">
+        <div  class="card-header">
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item pointerCursor" (click)="onClick(p.name)" *ngFor="let p of products">
+            {{p.name}}
+            <img mat-card-image src="{{p.path}}" alt=""> 
+          </li>              
+        </ul> 
+    </div>
+    <div class="divRight" >
+      <app-accordion [title]="productName">
+          <div class="mypanelbody"> <h3> {{discription}}</h3></div>
+          <div class="mypanelfooter"> <h3> {{companyName}}</h3></div>
+      </app-accordion>
+  </div>
+    </div>
+
+    
+</div>
