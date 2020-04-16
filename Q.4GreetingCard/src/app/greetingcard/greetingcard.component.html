@@ -1,0 +1,12 @@
+<h4>Greeting Card</h4>
+
+<select (change)="selectChangeHandler($event)">
+    <option>Please Select Category</option>
+    <option *ngFor="let c of categories" value="{{c}}"> {{c}} </option>
+</select>
+<br>
+
+<div>
+    <img mat-card-image src="{{imageName | cardpipe:'../assets/Images'}}" alt="">
+    <!-- <img style="margin-top:300px" src="{{imageName | cardpipe:'../assets/Images'}}" alt=""> -->
+</div>
