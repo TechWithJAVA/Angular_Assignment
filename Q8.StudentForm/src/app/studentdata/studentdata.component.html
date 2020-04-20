@@ -1,0 +1,29 @@
+
+<div class="container">
+    <div class="row">
+       <div class="form-bg">
+           <form #regForm='ngForm' (ngSubmit)="register(regForm)">
+            <h2 class="text-center">Registration Page</h2>
+           
+           <div class="form-group">
+               <input type="text" class="form-control" placeholder="First Name" name="firstname" ngModel>
+           </div>
+           <div class="form-group">
+            <input type="text" class="form-control" placeholder="Last Name" name="lastname" ngModel>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Email" name="email" ngModel>
+        </div>
+    
+         <div class="aligh-center">
+             <button type="submit" class="btn btn-primary" id="Register">Register</button>
+             <button mat-raised-button color="primary" (click)="confirmDialog()">Confirm</button>
+             <!-- <button (click)="openConfirmationDialog()" type="button" class="btn btn-primary">Cancel</button> -->
+            </div>
+        
+           </form>
+
+       </div>
+    </div>
+
+</div>
